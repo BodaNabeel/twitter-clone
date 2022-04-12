@@ -1,5 +1,10 @@
+import React from 'react';
+import MUIDrawer from './components/MUIDrawer';
+
 function App() {
-  return <div>Hello World!</div>;
+  return (
+  <MUIDrawer/>
+  );
 }
 
 export default App;
