@@ -98,9 +98,17 @@ export default function MUIDrawer(props) {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
+          boxShadow: "none"
         }}
       >
-        <Toolbar>
+        <Toolbar
+        elevation={0}
+          sx={{
+            bgcolor: "white",
+            color: "black",
+          }
+        }
+        >
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -110,8 +118,8 @@ export default function MUIDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+          <Typography fontWeight="700" variant="h6" noWrap component="div">
+            Home
           </Typography>
         </Toolbar>
       </AppBar>
@@ -158,7 +166,7 @@ export default function MUIDrawer(props) {
         sx={{
           flexGrow: 1,
           p: 3,
-          width: { sm: `calc(100% - ${drawerWidth}px)` }
+          width: { sm: `calc(100% - ${drawerWidth}px)` },
         }}
       >
         <Toolbar />
