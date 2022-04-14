@@ -21,11 +21,11 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 export default function Home() {
   const CreateTweet = () => {
     const icons = [
-      <ImageOutlinedIcon />,
-      <GifBoxOutlinedIcon />,
-      <SentimentSatisfiedOutlinedIcon />,
-      <CalendarMonthOutlinedIcon />,
-      <LocationOnOutlinedIcon />,
+      <ImageOutlinedIcon sx={{fontSize: "18px"}} />,
+      <GifBoxOutlinedIcon sx={{fontSize: "18px"}}/>,
+      <SentimentSatisfiedOutlinedIcon sx={{fontSize: "18px"}}/>,
+      <CalendarMonthOutlinedIcon sx={{fontSize: "18px"}}/>,
+      <LocationOnOutlinedIcon sx={{fontSize: "18px"}}/>,
     ];
 
     const textFieldStyle = {
@@ -49,19 +49,24 @@ export default function Home() {
           >
             <InputBase
             fullWidth
+            id="standard-multiline-flexible"
+            label="Multiline"
             multiline
+            maxRows="12"
             placeholder="What's happening?"
-            id="fullWidth"
            
             sx={{
-              // backgroundColor: "red",
-              border:"none"
+              border:"none",
+              "&.Mui-focused": {
+                borderBottom: "0.5px solid black"
+              }
             }}
             />
               <Box
               sx={{
                 display: "flex",
-                justifyContent: "space-between"
+                justifyContent: "space-between",
+                margin: "30px 10px 0"
               }}
               >
                 <List
@@ -78,6 +83,7 @@ export default function Home() {
                       >
                         <ListItemIcon
                           sx={{
+                            height: "6px",
                             minWidth: "12px",
                             color: "#1D9BF0",
                             fontWeight: "300"
@@ -92,7 +98,8 @@ export default function Home() {
 
               <Button 
               sx={{
-                alignSelf: "center"
+                alignSelf: "center",
+                borderRadius: "30px"
               }}
               variant="contained"
               >Tweet</Button>
