@@ -16,6 +16,7 @@ import GifBoxOutlinedIcon from "@mui/icons-material/GifBoxOutlined";
 import SentimentSatisfiedOutlinedIcon from "@mui/icons-material/SentimentSatisfiedOutlined";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+
 export default function Home() {
   const CreateTweet = () => {
     const icons = [
@@ -30,26 +31,32 @@ export default function Home() {
         <Box
           sx={{
             display: "flex",
-            gap: "20px",
+            gap: "20px", 
+            width: "100%"
           }}
         >
           <Avatar alt="user pfp" src="https://picsum.photos/id/237/200/300" />
-          <Box>
-            <TextField id="tweet-area" variant="outlined" />
-            <Box
+          <Box
+          sx={{
+            width: "50%"
+          }}
+          >
+            <TextField fullWidth
+            multiline
+            id="fullWidth"
+            />
+              <Box
               sx={{
                 display: "flex",
-                gap: "40px",
+                justifyContent: "space-between"
               }}
-            >
-              <Box>
+              >
                 <List
                   sx={{
                     display: "flex",
                   }}
                 >
                   {icons.map((element) => {
-                    console.log(element);
                     return (
                       <ListItem
                         sx={{
@@ -59,6 +66,8 @@ export default function Home() {
                         <ListItemIcon
                           sx={{
                             minWidth: "12px",
+                            color: "#1D9BF0",
+                            fontWeight: "300"
                           }}
                         >
                           {element}
@@ -67,9 +76,14 @@ export default function Home() {
                     );
                   })}
                 </List>
+
+              <Button 
+              sx={{
+                alignSelf: "center"
+              }}
+              variant="contained"
+              >Tweet</Button>
               </Box>
-              <Button variant="contained">Tweet</Button>
-            </Box>
           </Box>
         </Box>
       </>
