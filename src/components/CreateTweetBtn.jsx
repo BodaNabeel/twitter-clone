@@ -2,7 +2,7 @@ import { Button, Modal, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 
-export default function CreateTweet() {
+export default function CreateTweetBtn() {
   const style = {
     position: "absolute",
     top: "50%",
