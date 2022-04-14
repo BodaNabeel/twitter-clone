@@ -1,6 +1,7 @@
 import {
   Avatar,
   Button,
+  InputBase,
   List,
   ListItem,
   ListItemIcon,
@@ -26,6 +27,11 @@ export default function Home() {
       <CalendarMonthOutlinedIcon />,
       <LocationOnOutlinedIcon />,
     ];
+
+    const textFieldStyle = {
+      outline: "none",
+      border: "none"
+    }
     return (
       <>
         <Box
@@ -41,9 +47,16 @@ export default function Home() {
             width: "50%"
           }}
           >
-            <TextField fullWidth
+            <InputBase
+            fullWidth
             multiline
+            placeholder="What's happening?"
             id="fullWidth"
+           
+            sx={{
+              // backgroundColor: "red",
+              border:"none"
+            }}
             />
               <Box
               sx={{
